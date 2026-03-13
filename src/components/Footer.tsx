@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div>
             <a href="#" className="font-display text-lg font-bold tracking-tight">
-              <span className="text-gradient">Nexus</span>AI
+              <span className="text-gradient">Cyntera</span>Tech
             </a>
             <p className="mt-1 text-sm text-muted-foreground">
               AI Consulting & Engineering
