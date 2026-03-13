@@ -30,9 +30,11 @@ const CTASection = () => {
                 Book Your Free Session
                 <ArrowRight size={16} />
               </Button>
-              <Button variant="hero-outline" size="lg">
-                hello@cynteratech.com
-              </Button>
+              <a href="mailto:cyntera@cynteratech.com">
+                <Button variant="hero-outline" size="lg">
+                  cyntera@cynteratech.com
+                </Button>
+              </a>
             </div>
           </div>
         </motion.div>
