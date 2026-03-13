@@ -33,7 +33,7 @@ const WhyUsSection = () => {
             viewport={{ once: true }}
           >
             <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">
-              Why Nexus AI
+              Why CynteraTech
             </p>
             <h2 className="font-display text-3xl font-bold md:text-4xl">
               Not Another AI Vendor.
