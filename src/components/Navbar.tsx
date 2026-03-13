@@ -31,9 +31,11 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <Button variant="hero" size="sm">
-            Book a Call
-          </Button>
+          <a href="https://cal.com/cynteratechllc/30min" target="_blank" rel="noopener noreferrer">
+            <Button variant="hero" size="sm">
+              Book a Call
+            </Button>
+          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -62,9 +64,11 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="hero" size="sm" className="w-fit">
-                Book a Call
-              </Button>
+              <a href="https://cal.com/cynteratechllc/30min" target="_blank" rel="noopener noreferrer">
+                <Button variant="hero" size="sm" className="w-fit">
+                  Book a Call
+                </Button>
+              </a>
             </div>
           </motion.div>
         )}

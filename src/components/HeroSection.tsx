@@ -42,10 +42,12 @@ const HeroSection = () => {
           </p>
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Button variant="hero" size="lg" className="gap-2">
-              Schedule a Consultation
-              <ArrowRight size={16} />
-            </Button>
+            <a href="https://cal.com/cynteratechllc/30min" target="_blank" rel="noopener noreferrer">
+              <Button variant="hero" size="lg" className="gap-2">
+                Schedule a Consultation
+                <ArrowRight size={16} />
+              </Button>
+            </a>
             <Button variant="hero-outline" size="lg">
               View Our Work
             </Button>

@@ -26,10 +26,12 @@ const CTASection = () => {
               session with one of our senior consultants.
             </p>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Button variant="hero" size="lg" className="gap-2">
-                Book Your Free Session
-                <ArrowRight size={16} />
-              </Button>
+              <a href="https://cal.com/cynteratechllc/30min" target="_blank" rel="noopener noreferrer">
+                <Button variant="hero" size="lg" className="gap-2">
+                  Book Your Free Session
+                  <ArrowRight size={16} />
+                </Button>
+              </a>
               <a href="mailto:cyntera@cynteratech.com">
                 <Button variant="hero-outline" size="lg">
                   cyntera@cynteratech.com
