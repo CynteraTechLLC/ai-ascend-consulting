@@ -31,7 +31,7 @@ const CTASection = () => {
                 <ArrowRight size={16} />
               </Button>
               <Button variant="hero-outline" size="lg">
-                hello@nexusai.com
+                hello@cynteratech.com
               </Button>
             </div>
           </div>

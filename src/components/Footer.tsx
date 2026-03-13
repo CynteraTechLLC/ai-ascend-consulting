@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 border-t border-border/50 pt-6 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} NexusAI. All rights reserved.
+          © {new Date().getFullYear()} CynteraTech LLC. All rights reserved.
         </div>
       </div>
     </footer>
