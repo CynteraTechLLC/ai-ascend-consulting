@@ -18,8 +18,12 @@ const Footer = () => {
             <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
           </div>
         </div>
-        <div className="mt-8 border-t border-border/50 pt-6 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} CynteraTech LLC. All rights reserved.
+        <div className="mt-8 border-t border-border/50 pt-6 flex flex-col items-center gap-3 text-xs text-muted-foreground">
+          <div className="flex gap-4">
+            <a href="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</a>
+            <a href="/terms-and-conditions" className="hover:text-foreground transition-colors">Terms & Conditions</a>
+          </div>
+          <p>© {new Date().getFullYear()} CynteraTech LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>
