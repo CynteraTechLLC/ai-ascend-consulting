@@ -12,9 +12,9 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#services" className="hover:text-foreground transition-colors">Services</a>
-            <a href="#why-us" className="hover:text-foreground transition-colors">Why Us</a>
-            <a href="#process" className="hover:text-foreground transition-colors">Process</a>
+            <a href="/#services" className="hover:text-foreground transition-colors">Services</a>
+            <a href="/#why-us" className="hover:text-foreground transition-colors">Why Us</a>
+            <a href="/#process" className="hover:text-foreground transition-colors">Process</a>
             <a href="/#contact" className="hover:text-foreground transition-colors">Contact</a>
           </div>
         </div>
