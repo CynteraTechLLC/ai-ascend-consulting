@@ -16,15 +16,15 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mx-auto max-w-4xl text-center"
-        >
+          className="mx-auto max-w-4xl text-center">
+          
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm text-primary"
-          >
+            className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-1.5 text-sm text-primary">
+            
             <Sparkles size={14} className="animate-pulse-glow" />
             AI-Powered Business Transformation
           </motion.div>
@@ -54,31 +54,31 @@ const HeroSection = () => {
           </div>
 
           {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="mt-20 grid grid-cols-3 gap-8 border-t border-border/50 pt-10"
-          >
-            {[
-              { value: "150+", label: "AI Solutions Deployed" },
-              { value: "$2B+", label: "Client Revenue Impact" },
-              { value: "98%", label: "Client Retention Rate" },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <div className="font-display text-2xl font-bold text-foreground md:text-3xl">
-                  {stat.value}
-                </div>
-                <div className="mt-1 text-xs text-muted-foreground md:text-sm">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </motion.div>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </motion.div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
