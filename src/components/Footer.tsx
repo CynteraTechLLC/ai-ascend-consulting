@@ -4,11 +4,11 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div>
-            <a href="#" className="font-display text-lg font-bold tracking-tight">
-              <span className="text-gradient">Cyntera</span>Tech
+            <a href="/" className="font-display text-lg font-bold tracking-tight text-foreground">
+              Cyntera<span className="text-primary">Tech</span>
             </a>
             <p className="mt-1 text-sm text-muted-foreground">
-              AI Consulting & Engineering
+              AI Consulting &amp; Engineering
             </p>
           </div>
           <div className="flex gap-6 text-sm text-muted-foreground">
@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="mt-8 border-t border-border/50 pt-6 flex flex-col items-center gap-3 text-xs text-muted-foreground">
           <div className="flex gap-4">
             <a href="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</a>
-            <a href="/terms-and-conditions" className="hover:text-foreground transition-colors">Terms & Conditions</a>
+            <a href="/terms" className="hover:text-foreground transition-colors">Terms &amp; Conditions</a>
           </div>
           <p>© {new Date().getFullYear()} CynteraTech LLC. All rights reserved.</p>
         </div>

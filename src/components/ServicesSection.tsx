@@ -64,7 +64,7 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group rounded-lg border border-border/50 bg-card p-6 transition-all hover:border-primary/30 hover:glow-border"
+              className="group rounded-lg border border-border/50 bg-card p-6 transition-all hover:border-primary/30"
             >
               <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-primary/10 text-primary">
                 <service.icon size={20} />

@@ -55,24 +55,21 @@ const CTASection = () => {
           viewport={{ once: true }}
           className="relative overflow-hidden rounded-2xl border border-border/50 bg-card p-10 md:p-16"
         >
-          {/* Glow bg */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-primary/5 blur-[100px]" />
-
-          <div className="relative z-10 grid gap-12 md:grid-cols-2 md:gap-16">
+          <div className="grid gap-12 md:grid-cols-2 md:gap-16">
             {/* Left — CTA copy */}
-            <div className="flex flex-col justify-center text-center md:text-left">
+            <div className="flex flex-col justify-center">
               <h2 className="font-display text-3xl font-bold md:text-5xl">
                 Ready to Put AI
                 <br />
-                <span className="text-gradient">to Work?</span>
+                <span className="text-primary">to Work?</span>
               </h2>
               <p className="mt-4 max-w-xl text-muted-foreground leading-relaxed">
                 Let's discuss how AI can transform your business. Book a free 30-minute strategy
                 session or send us a message.
               </p>
-              <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row md:items-start">
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <a href="https://cal.com/cynteratechllc/30min" target="_blank" rel="noopener noreferrer">
-                  <Button variant="hero" size="lg" className="gap-2">
+                  <Button variant="default" size="lg" className="gap-2">
                     Book Your Free Session
                     <ArrowRight size={16} />
                   </Button>
@@ -86,7 +83,7 @@ const CTASection = () => {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="flex h-full flex-col items-center justify-center gap-4 text-center"
+                  className="flex h-full flex-col items-start justify-center gap-4"
                 >
                   <CheckCircle className="h-12 w-12 text-primary" />
                   <h3 className="font-display text-xl font-semibold text-foreground">
@@ -168,7 +165,7 @@ const CTASection = () => {
                     )}
                   </div>
 
-                  <Button type="submit" variant="hero" size="lg" className="w-full gap-2">
+                  <Button type="submit" variant="default" size="lg" className="w-full gap-2">
                     Send Message
                     <Send size={16} />
                   </Button>

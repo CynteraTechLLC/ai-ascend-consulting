@@ -23,8 +23,7 @@ const differentiators = [
 const WhyUsSection = () => {
   return (
     <section id="why-us" className="relative py-24 md:py-32">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.02] to-transparent" />
-      <div className="container relative mx-auto px-4 md:px-8">
+      <div className="container mx-auto px-4 md:px-8">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
           {/* Left */}
           <motion.div
@@ -38,10 +37,10 @@ const WhyUsSection = () => {
             <h2 className="font-display text-3xl font-bold md:text-4xl">
               Not Another AI Vendor.
               <br />
-              <span className="text-gradient">Your Strategic Partner.</span>
+              <span className="text-primary">Your Strategic Partner.</span>
             </h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              We embed with your team, understand your business inside-out, and deliver AI solutions 
+              We embed with your team, understand your business inside-out, and deliver AI solutions
               that create lasting competitive advantage.
             </p>
           </motion.div>

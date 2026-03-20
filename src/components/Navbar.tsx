@@ -16,8 +16,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
-        <a href="#" className="font-display text-xl font-bold tracking-tight text-foreground">
-          <span className="text-gradient">Cyntera</span>Tech
+        <a href="/" className="font-display text-xl font-bold tracking-tight text-foreground">
+          Cyntera<span className="text-primary">Tech</span>
         </a>
 
         {/* Desktop */}
@@ -32,7 +32,7 @@ const Navbar = () => {
             </a>
           ))}
           <a href="https://cal.com/cynteratechllc/30min" target="_blank" rel="noopener noreferrer">
-            <Button variant="hero" size="sm">
+            <Button variant="default" size="sm">
               Book a Call
             </Button>
           </a>
@@ -65,7 +65,7 @@ const Navbar = () => {
                 </a>
               ))}
               <a href="https://cal.com/cynteratechllc/30min" target="_blank" rel="noopener noreferrer">
-                <Button variant="hero" size="sm" className="w-fit">
+                <Button variant="default" size="sm" className="w-fit">
                   Book a Call
                 </Button>
               </a>
