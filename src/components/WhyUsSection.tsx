@@ -3,10 +3,6 @@ import { CheckCircle2 } from "lucide-react";
 
 const differentiators = [
   {
-    title: "Deep Technical Expertise",
-    description: "Our team includes PhDs, ex-FAANG engineers, and domain specialists who've shipped AI at scale.",
-  },
-  {
     title: "Industry-Specific Solutions",
     description: "We don't do generic. Every solution is purpose-built for your industry's unique challenges and regulations.",
   },
@@ -17,6 +13,10 @@ const differentiators = [
   {
     title: "Production-Grade Delivery",
     description: "We go beyond POCs. Our solutions are built for scale, security, and long-term maintainability.",
+  },
+  {
+    title: "Ongoing Support & Maintenance",
+    description: "We don't just deliver and disappear. Our team provides continuous support, monitoring, and optimization to keep your AI solutions running at peak performance.",
   },
 ];
 
