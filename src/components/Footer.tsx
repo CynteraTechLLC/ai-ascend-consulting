@@ -15,7 +15,7 @@ const Footer = () => {
             <a href="#services" className="hover:text-foreground transition-colors">Services</a>
             <a href="#why-us" className="hover:text-foreground transition-colors">Why Us</a>
             <a href="#process" className="hover:text-foreground transition-colors">Process</a>
-            <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>
+            <a href="/#contact" className="hover:text-foreground transition-colors">Contact</a>
           </div>
         </div>
         <div className="mt-8 border-t border-border/50 pt-6 flex flex-col items-center gap-3 text-xs text-muted-foreground">
