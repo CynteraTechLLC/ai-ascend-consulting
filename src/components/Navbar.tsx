@@ -4,10 +4,10 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Process", href: "#process" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#services" },
+  { label: "Why Us", href: "/#why-us" },
+  { label: "Process", href: "/#process" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
