@@ -4,10 +4,9 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { label: "Services", href: "/#services" },
+  { label: "Methodology", href: "/#services" },
   { label: "Why Us", href: "/#why-us" },
-  { label: "Process", href: "/#process" },
-  { label: "Contact", href: "/#contact" },
+  { label: "AI Glossary", href: "/glossary" },
 ];
 
 const Navbar = () => {

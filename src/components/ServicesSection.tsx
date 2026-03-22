@@ -1,83 +1,111 @@
+import { Search, Map, Cpu, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
-import { Brain, Workflow, BarChart3, Shield, Cpu, Zap } from "lucide-react";
 
-const services = [
+const pillars = [
   {
-    icon: Brain,
+    title: "Strategic Discovery",
+    description: "We invest time in deeply understanding your organization's unique workflows, bottlenecks, and objectives to identify high-ROI automation opportunities.",
+    icon: Search,
+    className: "md:col-span-2 md:row-span-2",
+    features: ["Deep-dive business analysis", "Identifying operational friction", "ROI forecasting and feasibility"],
+    visual: (
+      <div className="absolute right-0 bottom-0 w-2/3 h-2/3 opacity-[0.03] pointer-events-none transition-opacity duration-700 group-hover:opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-tl from-primary to-transparent" />
+        <div className="w-full h-full border-t border-l border-primary/40 rounded-tl-[100px]" />
+      </div>
+    ),
+  },
+  {
     title: "AI Strategy & Roadmap",
-    description: "We assess your operations, identify high-impact AI opportunities, and build a phased implementation roadmap.",
+    description: "Developing a comprehensive, phased plan for integrating AI into your company without disrupting critical daily operations.",
+    icon: Map,
+    className: "md:col-span-1",
+    features: ["Phased implementation planning", "Technology stack evaluation"],
   },
   {
-    icon: Workflow,
-    title: "Process Automation",
-    description: "Intelligent automation that eliminates bottlenecks, reduces manual effort, and scales with your business.",
-  },
-  {
-    icon: BarChart3,
-    title: "Predictive Analytics",
-    description: "Turn your data into foresight. Custom ML models that forecast trends, risks, and opportunities.",
-  },
-  {
+    title: "Systems Integration",
+    description: "Seamlessly engineering and embedding AI models, agents, and automations directly into your existing infrastructure and business systems.",
     icon: Cpu,
-    title: "Custom AI Development",
-    description: "Purpose-built AI solutions — from NLP engines to computer vision systems tailored to your industry.",
+    className: "md:col-span-1",
+    features: ["Custom automation pipelines", "Secure architectural design"],
   },
   {
-    icon: Shield,
-    title: "AI Governance & Ethics",
-    description: "Responsible AI frameworks ensuring compliance, fairness, and transparency across all deployments.",
-  },
-  {
-    icon: Zap,
-    title: "Rapid Prototyping",
-    description: "From concept to working prototype in weeks. Validate AI ideas fast before committing to full builds.",
+    title: "Ongoing Maintenance & Partnership",
+    description: "A continuous partnership to monitor performance, optimize algorithms, and adapt your AI infrastructure as your business scales and technology evolves.",
+    icon: ShieldCheck,
+    className: "md:col-span-3",
+    features: ["Performance monitoring", "Continuous optimizations", "Structural support & scaling"],
+    visual: (
+      <div className="absolute right-0 top-0 w-1/2 h-full opacity-5 pointer-events-none overflow-hidden transition-opacity duration-700 group-hover:opacity-10">
+         <div className="w-full h-full grid-pattern" />
+      </div>
+    ),
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="relative py-24 md:py-32">
-      <div className="container mx-auto px-4 md:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16 max-w-2xl"
-        >
-          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">
-            What We Do
-          </p>
-          <h2 className="font-display text-3xl font-bold md:text-4xl">
-            End-to-End AI Consulting
-          </h2>
-          <p className="mt-4 text-muted-foreground leading-relaxed">
-            We don't just advise — we architect, build, and deploy. Our services span the full 
-            AI lifecycle from strategy through production.
-          </p>
-        </motion.div>
+    <section id="services" className="relative py-24 md:py-32 bg-background overflow-hidden border-t border-white/5">
+      <div className="container relative z-10 mx-auto px-4 md:px-8">
+        
+        <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+          <div className="max-w-3xl">
+            <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">
+              Our Methodology
+            </p>
+            <h2 className="font-display text-4xl font-semibold md:text-5xl text-foreground mb-6">
+              The Four Pillars of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white">Integration.</span>
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed font-body">
+              We approach AI not as a novelty, but as a critical business infrastructure. Our four-pillar methodology ensures that every solution we integrate drives measurable, bottom-line results.
+            </p>
+          </div>
+        </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, i) => (
+        {/* Asymmetrical Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+          {pillars.map((item, index) => (
             <motion.div
-              key={service.title}
+              key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group rounded-lg border border-border/50 bg-card p-6 transition-all hover:border-primary/30"
+              transition={{ delay: index * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className={`glass-card p-8 group relative overflow-hidden flex flex-col justify-between border border-white/5 hover:border-white/10 transition-colors duration-500 bg-white/[0.02] ${item.className}`}
             >
-              <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-primary/10 text-primary">
-                <service.icon size={20} />
+              <div className="relative z-10 flex flex-col h-full">
+                <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20 transition-all duration-500 group-hover:scale-105 group-hover:bg-primary/20">
+                  <item.icon size={22} strokeWidth={1.5} />
+                </div>
+                
+                <h3 className="mb-3 font-display text-2xl font-semibold text-foreground tracking-tight">
+                  {item.title}
+                </h3>
+                
+                <p className="mb-6 text-muted-foreground leading-relaxed font-body flex-grow text-sm md:text-base">
+                  {item.description}
+                </p>
+
+                {item.features && (
+                  <ul className="space-y-2 mt-auto">
+                    {item.features.map((feature, i) => (
+                      <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground/80">
+                        <div className="h-1.5 w-1.5 rounded-full bg-primary/80" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
-              <h3 className="font-display text-lg font-semibold text-foreground">
-                {service.title}
-              </h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
+              
+              {/* Subtle inset hover glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
+              
+              {item.visual}
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
