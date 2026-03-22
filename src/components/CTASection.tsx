@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Send, CheckCircle, Calendar, Bot, CalendarDays, Zap, Clock, Compass, MessageSquare } from "lucide-react";
+import { Send, CheckCircle, Calendar, Bot, CalendarDays, Zap, Clock, Compass, MessageSquare, Search, Code } from "lucide-react";
 import { z } from "zod";
 import { getCalApi } from "@calcom/embed-react";
 
@@ -18,6 +18,8 @@ const contactSchema = z.object({
 type ContactForm = z.infer<typeof contactSchema>;
 
 const SERVICE_OPTIONS = [
+  { label: "AI Audit", value: "ai_audit", icon: Search },
+  { label: "Custom Development", value: "custom_dev", icon: Code },
   { label: "24/7 Phone Agent", value: "phone_agent", icon: Bot },
   { label: "Automated Booking", value: "auto_booking", icon: CalendarDays },
   { label: "Alert Routing", value: "alert_routing", icon: Zap },

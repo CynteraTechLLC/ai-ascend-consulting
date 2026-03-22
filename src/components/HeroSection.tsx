@@ -20,7 +20,7 @@ const HeroSection = () => {
       transition: {
         delay: i * 0.15,
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1], // Custom polished easing
+        ease: [0.16, 1, 0.3, 1] as any, // Custom polished easing
       },
     }),
   };
@@ -99,7 +99,7 @@ const HeroSection = () => {
               </Button>
             </div>
             
-            <a href="/#services" className="w-full sm:w-auto">
+            <a href="/#process" className="w-full sm:w-auto">
               <Button variant="outline" size="lg" className="w-full sm:w-auto glass-panel border-white/10 hover:border-white/20 text-foreground hover:bg-white/5 h-14 px-8 text-base font-medium tracking-wide transition-colors duration-300">
                 Explore Our Process
               </Button>

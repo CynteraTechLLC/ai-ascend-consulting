@@ -1,86 +1,82 @@
+import { Search, Hammer, RefreshCw, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 
 const steps = [
   {
-    number: "01",
-    title: "Mapping Your Workflow",
-    description: "We map out exactly how your phones ring, how leads come in, and where time is wasted in your daily operations.",
+    title: "Discovery",
+    description: "We learn your business inside and out, uncovering hidden bottlenecks and identifying precisely where AI can solve your biggest pain points.",
+    icon: Search,
   },
   {
-    number: "02",
-    title: "Building the Engine",
-    description: "We configure the custom AI agents to handle your specific booking rules, pricing, and emergency protocols.",
+    title: "Build & Iterate",
+    description: "We build your custom AI solutions in rapid, transparent cycles, allowing you to easily see progress and guide development.",
+    icon: Hammer,
   },
   {
-    number: "03",
-    title: "Connecting the Systems",
-    description: "We connect the new automation directly to your existing phone numbers, dispatch software, and team calendars.",
+    title: "Revise",
+    description: "A solution isn't finished until it performs perfectly in the real world. We rigorously test, gather feedback, and refine the system.",
+    icon: RefreshCw,
   },
   {
-    number: "04",
-    title: "Monitoring & Scaling",
-    description: "We monitor every call and message to ensure the AI sounds professional, captures every lead, and handles emergencies flawlessly.",
+    title: "Maintain & Grow",
+    description: "Launching is just the beginning. We provide ongoing support to ensure your infrastructure scales and drives compounding growth.",
+    icon: TrendingUp,
   },
 ];
 
 const ProcessSection = () => {
   return (
-    <section id="process" className="relative py-24 md:py-32 bg-background border-t border-white/5">
-      {/* Background radial gradient */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-[50vh] bg-primary/5 blur-[100px] pointer-events-none" />
-
+    <section id="process" className="relative py-24 md:py-32 bg-background overflow-hidden border-t border-white/5">
       <div className="container relative z-10 mx-auto px-4 md:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20 text-center max-w-3xl mx-auto"
-        >
-          <div className="flex items-center justify-center gap-2 mb-4">
-             <div className="h-[1px] w-8 bg-primary"></div>
-             <p className="text-sm font-semibold uppercase tracking-widest text-primary">
-               Methodology
-             </p>
-             <div className="h-[1px] w-8 bg-primary"></div>
-          </div>
-          <h2 className="font-display text-4xl font-bold md:text-5xl text-foreground">
-            Precision Execution
-          </h2>
-          <p className="mt-6 text-xl text-muted-foreground leading-relaxed font-body">
-            A proven, pragmatic approach to AI integration. We move from theory to production systems in weeks, not years.
+        
+        <div className="mb-16 md:mb-24 text-center max-w-3xl mx-auto flex flex-col items-center">
+          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">
+            Our Methodology
           </p>
-        </motion.div>
+          <h2 className="font-display text-4xl font-semibold md:text-5xl text-foreground mb-6">
+            From Idea to Impact in <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white">4 Steps.</span>
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed font-body">
+            A structured, transparent pathway ensuring every AI integration is fundamentally tethered to your core business objectives and bottom line.
+          </p>
+        </div>
 
-        <div className="relative">
-          {/* Continuous connecting line (desktop) */}
-          <div className="hidden md:block absolute top-[2.5rem] left-[12.5%] right-[12.5%] h-[2px] bg-border z-0">
-             <div className="h-full bg-gradient-to-r from-primary/0 via-primary/50 to-primary/0 w-full"></div>
-          </div>
+        <div className="relative max-w-6xl mx-auto">
+          {/* Connecting Line (Only visible on large screens) */}
+          <div className="hidden lg:block absolute top-[48px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-transparent via-primary/30 to-transparent pointer-events-none" />
 
-          <div className="grid gap-10 md:gap-6 md:grid-cols-4 relative z-10">
-            {steps.map((step, i) => (
+          {/* Uniform Grid Structure */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+            {steps.map((item, index) => (
               <motion.div
-                key={step.number}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                className="relative flex flex-col md:items-center md:text-center group"
+                transition={{ delay: index * 0.15, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="relative flex flex-col items-center text-center group px-4"
               >
-                {/* Step indicator */}
-                <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-card border border-border/50 shadow-xl group-hover:border-primary/50 group-hover:shadow-[0_0_20px_rgba(0,180,216,0.2)] transition-all duration-300 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
-                  <span className="font-display text-2xl font-bold text-foreground group-hover:text-primary transition-colors z-10">{step.number}</span>
+                {/* Visual Icon Box */}
+                <div className="relative z-10 mb-8 flex h-24 w-24 items-center justify-center rounded-2xl border border-white/10 bg-secondary/80 shadow-[0_0_15px_rgba(0,0,0,0.5)] backdrop-blur-md transition-transform duration-500 group-hover:-translate-y-2 group-hover:border-primary/40 group-hover:shadow-[0_0_30px_rgba(0,180,216,0.15)]">
+                   {/* Step Number Badge */}
+                   <div className="absolute -top-3 -right-3 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-sm shadow-lg border border-background">
+                     {index + 1}
+                   </div>
+                   <item.icon size={36} className="text-primary/70 group-hover:text-primary transition-colors duration-500" strokeWidth={1.5} />
                 </div>
                 
-                <h3 className="font-display text-xl font-semibold text-foreground mb-3">{step.title}</h3>
-                <p className="text-base text-muted-foreground leading-relaxed font-body max-w-[280px]">
-                  {step.description}
+                <h3 className="mb-4 font-display text-xl font-semibold text-foreground tracking-tight">
+                  {item.title}
+                </h3>
+                
+                <p className="text-muted-foreground leading-relaxed font-body text-base">
+                  {item.description}
                 </p>
               </motion.div>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
