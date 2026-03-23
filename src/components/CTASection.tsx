@@ -137,25 +137,24 @@ ${result.data.challenge}
                 Stop missing calls.<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white text-glow">Start automating.</span>
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed font-body mb-10">
+              <p className="text-lg text-muted-foreground leading-relaxed font-body mb-6">
                 Tell us about your biggest bottleneck, and we’ll show you exactly how an AI system can solve it.
               </p>
               
-              <div className="flex flex-col gap-4">
-                <div className="group relative w-full sm:w-auto">
-                  <div className="absolute -inset-1 rounded-lg bg-primary/30 blur transition duration-500 group-hover:bg-primary/50"></div>
-                  <Button 
-                    data-cal-namespace=""
-                    data-cal-link="cynteratechllc/30min"
-                    data-cal-config='{"layout":"month_view"}'
-                    size="lg" 
-                    className="relative w-full bg-primary text-primary-foreground hover:bg-primary/90 h-14 px-8 text-lg font-semibold uppercase tracking-wide gap-2 border border-primary/50"
-                  >
-                    <Calendar size={18} />
-                    Direct Booking
-                  </Button>
+              <div className="text-sm mb-6 p-6 rounded-2xl border border-primary/30 bg-primary/10 shadow-[0_0_15px_rgba(0,180,216,0.15)] relative overflow-hidden group">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative z-10">
+                  <p className="text-lg font-medium text-foreground mb-2 flex items-center gap-2">
+                    <Bot size={20} className="text-primary" />
+                    Try out our AI agent right now:
+                  </p>
+                  <p className="text-xl md:text-2xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-white mb-4">
+                    Text us at +1 (214) 427-4506
+                  </p>
+                  <p className="text-xs text-muted-foreground/80 leading-relaxed max-w-sm">
+                    Message and data rates may apply. Reply STOP to opt out. Reply HELP for help. We will not share your mobile information with third parties for marketing purposes.
+                  </p>
                 </div>
-                <p className="text-sm text-center text-muted-foreground mt-2">Skip the form? Schedule directly.</p>
               </div>
             </div>
 
